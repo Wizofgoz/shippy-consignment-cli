@@ -1,6 +1,8 @@
-FROM golang:1.9.0 as builder
+FROM golang:1.12-alpine as builder
 
 WORKDIR /go/src/github.com/wizofgoz/shippy-consignment-cli
+
+RUN apk add --no-cache git
 
 COPY . .
 
